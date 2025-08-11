@@ -1,0 +1,103 @@
+---
+// About section data
+const aboutData = {
+  title: "About Me",
+  description: "I'm a passionate Computer Science student at Vellore Institute of Technology with a strong interest in full-stack development, cloud technologies, and cybersecurity. I enjoy building innovative solutions and learning new technologies.",
+  highlights: [
+    "Currently pursuing B.Tech in Computer Science with a CGPA of 9.18",
+    "Experienced in Python, Go, JavaScript/TypeScript, and cloud platforms",
+    "Passionate about cybersecurity and ethical hacking",
+    "Active member of ACM Student Chapter as Research Lead",
+    "AWS Solutions Architect Associate certified",
+    "Enjoys contributing to open-source projects and hackathons"
+  ]
+};
+---
+
+<section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        {aboutData.title}
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Description -->
+      <div>
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+          {aboutData.description}
+        </p>
+        
+        <div class="space-y-4">
+          {aboutData.highlights.map((highlight) => (
+            <div class="flex items-start gap-3">
+              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+              <p class="text-gray-600 dark:text-gray-300">{highlight}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <!-- Skills Preview -->
+      <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+          Quick Skills Overview
+        </h3>
+        
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Python</span>
+              <span class="text-sm text-gray-500">Advanced</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+              <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Go</span>
+              <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+              <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript/TypeScript</span>
+              <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+              <div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">AWS/Cloud</span>
+              <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+              <div class="bg-orange-500 h-2 rounded-full" style="width: 85%"></div>
+            </div>
+          </div>
+          
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Cybersecurity</span>
+              <span class="text-sm text-gray-500">Intermediate</span>
+            </div>
+            <div class="w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+              <div class="bg-red-500 h-2 rounded-full" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

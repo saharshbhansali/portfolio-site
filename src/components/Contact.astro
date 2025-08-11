@@ -1,0 +1,158 @@
+---
+// Contact data
+const contactData = {
+  email: "saharsh.bhansali15@gmail.com",
+  phone: "+91-9941286420",
+  location: "Chennai, TN, India",
+  linkedin: "https://linkedin.com/in/saharsh-bhansali",
+  github: "https://github.com/saharshbhansali"
+};
+---
+
+<section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Get In Touch
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        I'm always interested in new opportunities, collaborations, and interesting projects. 
+        Feel free to reach out if you'd like to connect!
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Contact Information -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Contact Information
+        </h3>
+        
+        <div class="space-y-4">
+          <a 
+            href={`mailto:${contactData.email}`}
+            class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 group"
+          >
+            <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <i class="fas fa-envelope text-red-600 dark:text-red-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white">Email</h4>
+              <p class="text-gray-600 dark:text-gray-300">{contactData.email}</p>
+            </div>
+          </a>
+          
+          <a 
+            href={`tel:${contactData.phone}`}
+            class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 group"
+          >
+            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <i class="fas fa-phone text-green-600 dark:text-green-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white">Phone</h4>
+              <p class="text-gray-600 dark:text-gray-300">{contactData.phone}</p>
+            </div>
+          </a>
+          
+          <div class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
+            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+              <i class="fas fa-map-marker-alt text-blue-600 dark:text-blue-400 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white">Location</h4>
+              <p class="text-gray-600 dark:text-gray-300">{contactData.location}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Actions -->
+      <div class="space-y-6">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+          Quick Actions
+        </h3>
+        
+        <div class="space-y-4">
+          <a 
+            href={contactData.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors duration-200 group"
+          >
+            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <i class="fab fa-linkedin-in text-white text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white">Connect on LinkedIn</h4>
+              <p class="text-gray-600 dark:text-gray-300">Let's connect professionally</p>
+            </div>
+          </a>
+          
+          <a 
+            href={contactData.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 group"
+          >
+            <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <i class="fab fa-github text-white text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white">View GitHub</h4>
+              <p class="text-gray-600 dark:text-gray-300">Check out my projects</p>
+            </div>
+          </a>
+          
+          <a 
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-4 p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors duration-200 group"
+          >
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <i class="fas fa-file-pdf text-white text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white">Download Resume</h4>
+              <p class="text-gray-600 dark:text-gray-300">Get my full resume</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="mt-16 text-center">
+      <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white">
+        <h3 class="text-2xl font-bold mb-4">
+          Ready to Work Together?
+        </h3>
+        <p class="text-blue-100 mb-6 max-w-2xl mx-auto">
+          I'm currently open to new opportunities and collaborations. Whether you have a project in mind, 
+          want to discuss potential opportunities, or just want to say hello, I'd love to hear from you!
+        </p>
+        <a 
+          href={`mailto:${contactData.email}?subject=Portfolio Contact`}
+          class="inline-flex items-center gap-2 px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-200 font-semibold"
+        >
+          <i class="fas fa-paper-plane"></i>
+          <span>Send Message</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-gray-400 mb-4">
+      © 2024 Saharsh Bhansali. All rights reserved.
+    </p>
+    <p class="text-gray-500 text-sm">
+      Built with ❤️ using Astro.js and Tailwind CSS
+    </p>
+  </div>
+</footer> 

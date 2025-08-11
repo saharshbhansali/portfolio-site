@@ -1,0 +1,88 @@
+---
+// Experience data from resume
+const experienceData = [
+  {
+    company: "Bain & Company (BCN)",
+    position: "Analyst, Intern",
+    duration: "Jan, 2025 -- Present",
+    location: "On-site",
+    technologies: ["Python", "Pandas", "FastAPI", "Azure", "Docker", "Plotly-Dash", "NextJS"],
+    achievements: [
+      "Developed dashboards using Python, Pandas, and Plotly-Dash/ReactJS migrating out of Tableau, with a projected savings opportunity of $200K per annum in licensing costs.",
+      "Deployed and maintained multiple tools with Docker and Azure. Optimized existing tools' performance (10x latency reduction) and scalability (multi-user support and load balancing).",
+      "Integrated AI into toolkits using OpenAI Chat & Responses APIs, LangChain, and LangGraph."
+    ]
+  },
+  {
+    company: "Stealth Startup",
+    position: "Freelance",
+    duration: "June, 2024 -- Dec, 2024",
+    location: "Remote",
+    technologies: ["AWS", "Django", "PyTest", "Nginx", "Docker"],
+    achievements: [
+      "Provisioned cloud and security infrastructure. Set up API servers and reverse-proxy for different endpoints.",
+      "Dockerized and self-hosted a Supabase instance, with an externally managed Postgres database on a local docker network. Integrated API with Supabase (Database, Realtime, & Auth.)",
+      "Created a test suite to unit-test the API using PyTest and Django's testing framework."
+    ]
+  }
+];
+---
+
+<section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Work Experience
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    
+    <div class="space-y-12">
+      {experienceData.map((job, index) => (
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+          <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+            <div class="mb-4 lg:mb-0">
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                {job.position}
+              </h3>
+              <h4 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                {job.company}
+              </h4>
+              <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
+                <span class="flex items-center gap-1">
+                  <i class="fas fa-calendar-alt"></i>
+                  {job.duration}
+                </span>
+                <span class="flex items-center gap-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                  {job.location}
+                </span>
+              </div>
+            </div>
+            
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-2">
+              {job.technologies.map((tech) => (
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <!-- Achievements -->
+          <div class="space-y-3">
+            {job.achievements.map((achievement) => (
+              <div class="flex items-start gap-3">
+                <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {achievement}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section> 

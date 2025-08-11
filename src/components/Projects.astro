@@ -1,0 +1,140 @@
+---
+// Projects data from resume
+const projectsData = [
+  {
+    title: "Decentralized Voting",
+    description: "Built an API for a decentralized referendum platform using alternative voting systems.",
+    duration: "Sept, 2024 -- Nov, 2024",
+    technologies: ["FastAPI", "PyTest", "Docker", "Jupyter Notebook"],
+    github: "https://github.com/saharshbhansali/bohemian-backend",
+    features: [
+      "Built an API for a decentralized referendum platform using alternative voting systems.",
+      "Visualized the difference between traditional voting and alternative systems like Ranked Choice Voting.",
+      "Implemented a Zero Knowledge Proof based user authentication system.",
+      "Containerized the backend for easy and consistent deployments across systems."
+    ]
+  },
+  {
+    title: "CLI - Top",
+    description: "Unofficial CLI to access the university's Learning Management System (LMS); used by 400+ students.",
+    duration: "Dec, 2023 - Jan, 2024",
+    technologies: ["Go", "Cobra", "Glamour", "GitHub Actions", "BurpSuite"],
+    github: "https://github.com/ACM-VIT/cli-top",
+    demo: "https://cli-top.acmvit.in",
+    features: [
+      "Unofficial CLI to access the university's Learning Management System (LMS); used by 400+ students.",
+      "Developed key features -- autologin, attendance alert, kill-switch for centralized control, and mark totaling.",
+      "Built a CI/CD pipeline to distribute binaries using GitHub Actions."
+    ]
+  },
+  {
+    title: "Inventory Management System",
+    description: "Experimental inventory management system, to self-learn full stack development.",
+    duration: "Sept, 2023 - Dec, 2023",
+    technologies: ["Go", "NextJS", "TypeScript", "TailwindCSS", "Docker"],
+    github: "https://github.com/saharshbhansali/TallyStock",
+    features: [
+      "Experimental inventory management system, to self-learn full stack development.",
+      "A Dockerized Go API using gofiber and gorm, and NextJS frontend using MaterialUI and ShadcnUI."
+    ]
+  }
+];
+---
+
+<section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Featured Projects
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projectsData.map((project, index) => (
+        <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                {project.title}
+              </h3>
+              <div class="flex gap-2">
+                {project.github && (
+                  <a 
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
+                    aria-label="GitHub"
+                  >
+                    <i class="fab fa-github text-lg"></i>
+                  </a>
+                )}
+                {project.demo && (
+                  <a 
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                    aria-label="Live Demo"
+                  >
+                    <i class="fas fa-external-link-alt text-lg"></i>
+                  </a>
+                )}
+              </div>
+            </div>
+            
+            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+              {project.description}
+            </p>
+            
+            <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-4">
+              <i class="fas fa-calendar-alt"></i>
+              <span>{project.duration}</span>
+            </div>
+            
+            <!-- Technologies -->
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.technologies.map((tech) => (
+                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-md text-xs font-medium">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            <!-- Features -->
+            <div class="space-y-2">
+              {project.features.slice(0, 2).map((feature) => (
+                <div class="flex items-start gap-2">
+                  <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {feature}
+                  </p>
+                </div>
+              ))}
+              {project.features.length > 2 && (
+                <p class="text-sm text-gray-500 dark:text-gray-400 italic">
+                  +{project.features.length - 2} more features
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- View More Projects Button -->
+    <div class="text-center mt-12">
+      <a 
+        href="https://github.com/saharshbhansali"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+      >
+        <i class="fab fa-github"></i>
+        <span>View More Projects</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section> 

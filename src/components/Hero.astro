@@ -1,0 +1,97 @@
+---
+// Hero section data
+const heroData = {
+  name: "Saharsh Bhansali",
+  title: "Computer Science Student & Developer",
+  location: "Chennai, TN, India",
+  phone: "+91-9941286420",
+  email: "saharsh.bhansali15@gmail.com",
+  linkedin: "saharsh-bhansali",
+  github: "saharshbhansali",
+  description: "Passionate about technology, cybersecurity, and building innovative solutions. Currently pursuing Computer Science at VIT with a focus on full-stack development and cloud technologies."
+};
+---
+
+<section id="hero" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- Profile Image Placeholder -->
+    <div class="mb-8">
+      <div class="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">
+        SB
+      </div>
+    </div>
+    
+    <!-- Name and Title -->
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+      {heroData.name}
+    </h1>
+    
+    <h2 class="text-xl sm:text-2xl lg:text-3xl font-medium text-gray-600 dark:text-gray-300 mb-6">
+      {heroData.title}
+    </h2>
+    
+    <!-- Description -->
+    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+      {heroData.description}
+    </p>
+    
+    <!-- Contact Information -->
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <a 
+        href={`https://maps.app.goo.gl/BbEcfikH5ufvvMyG6`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+      >
+        <i class="fas fa-home"></i>
+        <span>{heroData.location}</span>
+      </a>
+      
+      <a 
+        href={`tel:${heroData.phone}`}
+        class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400"
+      >
+        <i class="fas fa-phone"></i>
+        <span>{heroData.phone}</span>
+      </a>
+      
+      <a 
+        href={`mailto:${heroData.email}`}
+        class="flex items-center gap-2 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400"
+      >
+        <i class="fas fa-envelope"></i>
+        <span>{heroData.email}</span>
+      </a>
+    </div>
+    
+    <!-- Social Links -->
+    <div class="flex justify-center gap-4 mb-8">
+      <a 
+        href={`https://linkedin.com/in/${heroData.linkedin}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:scale-110 shadow-lg"
+        aria-label="LinkedIn"
+      >
+        <i class="fab fa-linkedin-in text-lg"></i>
+      </a>
+      
+      <a 
+        href={`https://github.com/${heroData.github}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-12 h-12 bg-gray-900 hover:bg-gray-800 rounded-full flex items-center justify-center text-white transition-all duration-200 hover:scale-110 shadow-lg"
+        aria-label="GitHub"
+      >
+        <i class="fab fa-github text-lg"></i>
+      </a>
+    </div>
+    
+    <!-- Scroll Down Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <a href="#about" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </div>
+</section> 

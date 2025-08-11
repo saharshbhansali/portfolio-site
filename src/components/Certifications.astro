@@ -1,0 +1,180 @@
+---
+// Certifications and achievements data from resume
+const certificationsData = [
+  {
+    title: "Solutions Architect Associate (SAA-C03)",
+    issuer: "Amazon Web Services (AWS)",
+    link: "https://www.credly.com/badges/dc22fd53-b367-4c97-b2ef-066a59371946/public_url",
+    icon: "fab fa-aws",
+    color: "orange"
+  },
+  {
+    title: "Certified Cloud Practitioner (CLF-C02)",
+    issuer: "Amazon Web Services (AWS)",
+    link: "https://www.credly.com/badges/d0f572c3-7d2c-416c-803d-4963611704f5/public_url",
+    icon: "fab fa-aws",
+    color: "orange"
+  }
+];
+
+const achievementsData = [
+  {
+    title: "2023 Yantra 'Main Hack' - Education Track Winner",
+    description: "Career Node project - VIT, Vellore",
+    link: "https://github.com/kaushalrathi24/funtimeError",
+    icon: "fas fa-trophy",
+    color: "yellow"
+  }
+];
+
+const extraCurricularData = [
+  {
+    organization: "Association for Computing Machinery - Student Chapter",
+    role: "Research Lead",
+    duration: "June, 2022 -- Oct, 2024",
+    location: "VIT, Vellore",
+    achievements: [
+      "Developed questions for the Reverse Coding (RC) contest with 500+ contestants.",
+      "Built CI/CD pipelines for RC using GitHub Actions, Docker, and CMake for multi-platform question binaries.",
+      "Facilitated Cryptic Hunt - a 3-day, annual, campus-wide, hybrid treasure hunt, with 700+ participants.",
+      "Speaker and organiser at CodexCryptum, a cryptography and cybersecurity bootcamp, for 2 years."
+    ]
+  }
+];
+---
+
+<section id="certifications" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Certifications & Achievements
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+    </div>
+    
+    <!-- Certifications -->
+    <div class="mb-16">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        Professional Certifications
+      </h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        {certificationsData.map((cert) => (
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-start gap-4">
+              <div class={`w-12 h-12 bg-${cert.color}-100 dark:bg-${cert.color}-900 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                <i class={`${cert.icon} text-${cert.color}-600 dark:text-${cert.color}-400 text-xl`}></i>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  {cert.title}
+                </h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">
+                  {cert.issuer}
+                </p>
+                <a 
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
+                >
+                  <span>View Certificate</span>
+                  <i class="fas fa-external-link-alt text-sm"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Achievements -->
+    <div class="mb-16">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        Achievements & Awards
+      </h3>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        {achievementsData.map((achievement) => (
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+            <div class="flex items-start gap-4">
+              <div class={`w-12 h-12 bg-${achievement.color}-100 dark:bg-${achievement.color}-900 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                <i class={`${achievement.icon} text-${achievement.color}-600 dark:text-${achievement.color}-400 text-xl`}></i>
+              </div>
+              <div class="flex-1">
+                <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                  {achievement.title}
+                </h4>
+                <p class="text-gray-600 dark:text-gray-300 mb-3">
+                  {achievement.description}
+                </p>
+                {achievement.link && (
+                  <a 
+                    href={achievement.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
+                  >
+                    <span>View Project</span>
+                    <i class="fas fa-external-link-alt text-sm"></i>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Extra Curricular Activities -->
+    <div>
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        Extra Curricular Activities
+      </h3>
+      
+      <div class="space-y-8">
+        {extraCurricularData.map((activity) => (
+          <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+              <div class="mb-4 lg:mb-0">
+                <h4 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  {activity.organization}
+                </h4>
+                <h5 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                  {activity.role}
+                </h5>
+                <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
+                  <span class="flex items-center gap-1">
+                    <i class="fas fa-calendar-alt"></i>
+                    {activity.duration}
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <i class="fas fa-map-marker-alt"></i>
+                    {activity.location}
+                  </span>
+                </div>
+              </div>
+              
+              <!-- Organization Icon -->
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                ACM
+              </div>
+            </div>
+            
+            <!-- Achievements -->
+            <div class="space-y-3">
+              {activity.achievements.map((achievement) => (
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {achievement}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section> 

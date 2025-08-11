@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "absent-ascension",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,5 +10,9 @@
   },
   "dependencies": {
     "astro": "^5.12.9"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "tailwindcss": "^4.1.11"
   }
 }
