@@ -1,0 +1,459 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% \usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% -------- Custom Packages and Commands ----------
+\usepackage{soul} % http://ctan.org/pkg/soul
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{2.5pt}
+\contourlength{0.25pt}
+\newcommand{\uniformunderline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+\usepackage{lmodern}
+% -------------------------------------------------
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\large#1} & \textbf{\small #2} \\
+      \textit{\large#3} & \textit{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\vspace{0pt}
+
+
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Saharsh Bhansali} \\ \vspace{7.5pt}
+    % Chennai, Tamil Nadu, India \\ \vspace{1pt}
+    \small \ 
+        \href{https://maps.app.goo.gl/BbEcfikH5ufvvMyG6}{ \raisebox{-0.2\height}\faHome\ 
+        \uniformunderline{Chennai, TN, India}}\
+        \
+        \href{tel:+919941286420}{ \raisebox{-0.2\height}\faPhone\ 
+        \uniformunderline{+91-9941286420}~}\
+        \
+        \href{mailto:saharsh.bhansali15@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \uniformunderline{saharsh.bhansali15@gmail.com}~}\
+        \
+        \href{https://linkedin.com/in/saharsh-bhansali}{\raisebox{-0.2\height}\faLinkedinSquare\ \uniformunderline{saharsh-bhansali}~}\
+        \
+        \href{https://github.com/saharshbhansali}{\raisebox{-0.2\height}\faGithub\ \uniformunderline{saharshbhansali}~}\
+        \
+        % \href{https://www.hackerrank.com/yourid}{\raisebox{-0.2\height}\faHackerrank\ \uniformunderline{yourid}} ~\
+        \
+        % \href{https://codeforces.com/profile/yourid}{\raisebox{-0.2\height}\faPoll\ \uniformunderline{yourid}} ~
+\vspace{1pt}
+\end{center}
+
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION} 
+    \vspace{2.5pt}
+    \resumeSubHeadingListStart
+
+        \resumeSubheading
+            {Vellore Institute of Technology}{July, 2021 -- July, 2025}
+            {Bachelor of Technology - Computer Science and Engineering - \textbf{CGPA} - \textbf{9.18}}{Vellore, India}
+            \vspace{-1pt}
+
+        % \resumeSubheading
+        %     {Bhavan's Rajaji Vidhyashram}{June, 2019 -- June, 2021}
+        %     {CBSE - Physics, Chemistry, Math, Computer Science  - \textbf{Percentage} - \textbf{96.4\%}}{Chennai, India}
+        %     \vspace{-1pt}
+
+    \resumeSubHeadingListEnd
+    \vspace{-10pt}
+
+
+
+%-----------EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+    \vspace{2.5pt}
+    \resumeSubHeadingListStart
+
+        \resumeSubheading
+            {Bain \& Company (BCN)}{Jan, 2025 -- Present} 
+            {\uniformunderline{Analyst, Intern} $|$ \textnormal{Python, Pandas, FastAPI, Azure, Docker, Plotly-Dash, NextJS } } {On-site}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Developed dashboards using Python, Pandas, and Plotly-Dash/ReactJS migrating out of Tableau, with a projected savings opportunity of \$200K per annum in licensing costs.}}
+                \resumeItem{\normalsize{Deployed and maintained multiple tools with Docker and Azure. Optimized existing tools' performance (10x latency reduction) and scalability (multi-user support and load balancing).}}
+                \resumeItem{\normalsize{Intergated AI into toolkits using OpenAI Chat \& Responses APIs, LangChain, and LangGraph.}}
+            \resumeItemListEnd  
+    
+        \resumeSubheading
+            {Stealth Startup}{June, 2024 -- Dec, 2024} 
+            {\uniformunderline{Freelance} $|$ \textnormal{AWS, Django, PyTest, Nginx, Docker \href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{\raisebox{-0.05\height}\faExternalLink} } }{Remote}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Provisioned cloud and security infrastructure. Set up API servers and reverse-proxy for different endpoints.}}
+                \resumeItem{\normalsize{\href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{Dockerized and self-hosted a Supabase instance}, with an externally managed Postgres database on a local docker network. Integrated API with Supabase (Database, Realtime, \& Auth.)}} 
+                % \href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{\raisebox{-0.1\height}\faExternalLink}
+                \resumeItem{\normalsize{Created a test suite to unit-test the API using PyTest and Django's testing framework.}}
+            \resumeItemListEnd  
+
+    
+        % \resumeSubheading
+        %     {Company Name \href{certificate Link}{\raisebox{-0.1\height}\faExternalLink }}{MM YYYY -- MM YYYY} 
+        %     {\uniformunderline{Role Name}}{city, country}
+        %     \resumeItemListStart
+        %         \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
+        %         \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
+        %         \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
+        %     \resumeItemListEnd  
+ 
+    \resumeSubHeadingListEnd
+    \vspace{-10pt}
+
+
+
+
+%-----------PROJECT EXPERIENCE-----------
+\section{PROJECT EXPERIENCE}
+    \vspace{-2.5pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+            {\href{https://github.com/saharshbhansali/bohemian-backend}{\textbf{\large{Decentralized Voting}} \href{https://github.com/saharshbhansali/bohemian-backend}{\raisebox{-0.1\height}\faExternalLink }} $|$ \normalsize{FastAPI, PyTest, Docker,  \href{https://colab.research.google.com/github/saharshbhansali/bohemian-referendums/blob/main/ranked-choice.ipynb}{\textbf{Jupyter Notebook}}} {\raisebox{-0.1\height}\faExternalLink}}{Sept, 2024 -- Nov, 2024}
+            \vspace{-11pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{Built an API for a decentralized referendum platform using alternative voting systems.}} 
+                \resumeItem{\normalsize{Visualized the difference between traditional voting and alternative systems like Ranked Choice Voting.}}
+                \resumeItem{\normalsize{Implemented a Zero Knowledge Proof based user authentication system.}}
+                \resumeItem{\normalsize{Containerized the backend for easy and consistent deployments across systems.}}
+                % \resumeItem{\textcolor{accent} {\href{https://github.com/saharshbhansali/bohemian-backend/archive/refs/heads/main.zip} {\uniformunderline{\normalsize{Download}}}}}
+            \resumeItemListEnd
+            \vspace{-15pt}
+
+        \resumeProjectHeading
+            {\href{https://cli-top.acmvit.in}{\textbf{\large{CLI - Top}} \href{https://cli-top.acmvit.in}{\raisebox{-0.1\height}\faExternalLink }} $|$ \normalsize{\href{https://github.com/ACM-VIT/cli-top}{Go, Cobra, Glamour, GitHub Actions, BurpSuite}}\textcolor{blue}{\small{\textit{*}}}}{Dec, 2023 - Jan, 2024}
+            \vspace{-11pt}
+            \resumeItemListStart
+                \resumeItem{\normalsize{\textbf{Unofficial} CLI to access the university's Learning Management System (LMS); used by 400+ students.}} 
+                \resumeItem{\normalsize{Developed key features -- autologin, attendance alert, kill-switch for centralized control, and mark totaling.}}
+                \resumeItem{\normalsize{Built a CI/CD pipeline to distribute binaries using GitHub Actions.}}
+            \resumeItemListEnd
+            \vspace{-15pt}
+      
+        % \resumeProjectHeading
+        %     {\href{https://github.com/saharshbhansali/TallyStock}{\textbf{\large{Inventory Management System}} \href{https://github.com/saharshbhansali/TallyStock}{\raisebox{-0.1\height}\faExternalLink }} $|$ \normalsize{Go, NextJS, TypeScript, TailwindCSS, Docker}}{Sept, 2023 - Dec, 2023}
+        %     \vspace{-11pt}
+        %     \resumeItemListStart
+        %         \resumeItem{\normalsize{Experimental inventory management system, to self-learn full stack development.}} 
+        %         \resumeItem{\normalsize{A Dockerized Go API using gofiber and gorm, and NextJS frontend using MaterialUI and ShadcnUI.}} 
+        %         % \resumeItem{\normalsize{Backend: Go, gofiber, and gorm}}
+        %         % \resumeItem{\normalsize{Frontend: TypeScript, NextJS, TailwindCSS, MaterialUI, and ShadcnUI. CLI Frontend: Python}}
+        %         % \resumeItem{\normalsize{Infrastructure: Docker (local application)}}
+        %     \resumeItemListEnd
+        %     \vspace{-15pt}
+
+        % \resumeProjectHeading
+        %     {\href{https://github.com/kaushalrathi24/funtimeError}{\textbf{\large{Career Node}} \href{https://github.com/kaushalrathi24/funtimeError}{\raisebox{-0.1\height}\faExternalLink }} $|$ \normalsize{OpenAI GPT-3.5 API, TypeScript, Flask}}{June, 2023}
+        %     \vspace{-11pt}
+        %     \resumeItemListStart
+        %         \resumeItem{\normalsize{Integrated the OpenAI GPT-3.5 API for personalizing responses to users' resumes.}} 
+        %         \resumeItem{\normalsize{Crafted prompts to extract information from resumes, suggest career paths, and curate learning material.}} 
+        %         % \resumeItem{\normalsize{2023 Yantra "Main Hack" Education Track Winner.}} \vspace{-0.1pt}
+        %         % \resumeItem{\textcolor{accent} {\href{https://github.com/kaushalrathi24/funtimeError/archive/refs/heads/main.zip}{\uniformunderline{\normalsize{Download}}}}}
+        %     \resumeItemListEnd 
+        %     \vspace{-14pt}
+
+        % \resumeProjectHeading
+        %     {\href{https://github.com/ACM-VIT/accessDenied}{\textbf{\large{Access Denied}} \href{https://github.com/ACM-VIT/accessDenied}{\raisebox{-0.1\height}\faExternalLink }} $|$ \normalsize{Python, JavaScript, \href{https://colab.research.google.com/drive/1oTl9P42TniMFApstGZ4R4WLa_jZR1WrS}{\textbf{Jupyter Notebook}}} {\raisebox{-0.1\height}\faExternalLink}}{Dec, 2022}
+        %     \vspace{-11pt}
+        %     \resumeItemListStart
+        %         \resumeItem{\normalsize{Built a decentralized authentication system from scratch using Zero-Knowledge Proofs (ZKPs).}} 
+        %         \resumeItem{\normalsize{Led the team in ideation, researching ZKPs, and translating complex theories into a CLI demonstration.}}
+        %         % \resumeItem{\textcolor{accent} {\href{https://github.com/ACM-VIT/accessDenied/archive/refs/heads/main.zip} {\uniformunderline{\normalsize{Download}}}}}
+        %     \resumeItemListEnd
+        %     \vspace{-15pt}
+
+        % \resumeProjectHeading
+        %     {\textbf{\large{Self-Taught Tinkerer}}\textcolor{blue}{\small{\textit{*}}}}
+        %     { }
+        %     \vspace{-11pt}
+        %     \resumeItemListStart 
+
+        %         \resumeItem{\normalsize{\href{https://github.com/saharshbhansali/.dotfiles}{\textbf{System Administration}} \href{https://github.com/saharshbhansali/.dotfiles}{\raisebox{-0.1\height}\faExternalLink } $|$ Shell Scripting, Chezmoi, GNU Stow, Nix, Ansible: A development setup and streamlined workflow, with automated configuration management, rapidly deployable on multiple platforms.}} \vspace{-11pt} \
+
+        %         \resumeItem{\normalsize{\textbf{Home Labs, CTFs, and Bug Bounties} $|$ BurpSuite, Ghidra, Metasploit, JohnTheRipper, Gobuster, Exiftool, ReconDog, VirtualBox, ParrotOS, Kali Linux: Learning cyber-security through hands-on exercises.}} \vspace{-12.5pt} \
+
+        %         % \resumeItem{\normalsize{\href{https://saharshbhansali.github.io/about-me/}{\textbf{Personal Site}} \href{https://saharshbhansali.github.io/about-me/}{\raisebox{-0.1\height}\faExternalLink} $|$ Jekyll, Markdown, GitHub Pages, LaTeX: A static website to showcase my professional profile and skills.}} \ 
+
+        %         % \resumeItem{\normalsize{\href{https://gist.github.com/saharshbhansali/5da604f1731c7d5ea07b2bd91552d48c}{\textbf{Obsidian Notes}} \href{https://gist.github.com/saharshbhansali/5da604f1731c7d5ea07b2bd91552d48c}{\raisebox{-0.1\height}\faExternalLink}: A formatting guide for a note-taking app, Obsidian.}} \
+
+        %     \resumeItemListEnd
+        %     \vspace{-15pt}
+
+        % \resumeProjectHeading
+        %     {\href{https://github.com/saharshbhansali/.dotfiles}{\textbf{\large{\uniformunderline{System Administration}}} \href{https://github.com/saharshbhansali/.dotfiles}{\raisebox{-0.1\height}\faExternalLink }} $|$ \normalsize{\uniformunderline{Shell Scripting, Python, Configuration Files}}}{Dec, 2022}
+        %     \vspace{-9pt}
+        %     \resumeItemListStart
+        %         \resumeItem{\normalsize{Linux, Windows, and VPS system configurations and workflows for streamlined administration of personal workspaces.}}
+        %         % \resumeItem{\textcolor{accent} {\href{https://github.com/saharshbhansali/.dotfiles/archive/refs/heads/main.zip} {\uniformunderline{\normalsize{Download}}}}}
+        %     \resumeItemListEnd
+        %     % \vspace{-13pt}
+
+    \resumeSubHeadingListEnd
+    \vspace{6.5pt}
+
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+    \vspace{2.5pt}
+    \begin{itemize}[leftmargin=0in, label={}]
+        \small{\item{
+        \resumeItemListStart
+            \resumeItem{\textbf{\normalsize{Technologies and Frameworks:}}{ \normalsize{Git, Docker, AWS, Azure, FastAPI, Pandas, NextJS, ReactJS, Plotly-Dash, Redis, OpenAI API, LangChain, LangGraph, Alteryx, Tableau, PowerBI, BurpSuite, Nessus, Ghidra, Metasploit, JohnTheRipper, Gobuster, Exiftool, Infoga, ReconDog}}} \vspace{2.5pt} \\
+
+            \resumeItem{\textbf{\normalsize{Languages:}}{ \normalsize{Python, Shell Scripting, C/C++, Go, Java, TypeScript, SQL, NoSQL, R}}} \vspace{2.5pt} \\
+
+            \resumeItem{\textbf{\normalsize{Developer Tools:}}{ \normalsize{VMWare, VirtualBox, Linux, GitHub, Neovim, Excel}}} \vspace{2.5pt} \\
+
+            % \resumeItem{\textbf{\normalsize{Design:}}{ \normalsize{Figma, Photoshop, Illustrator, Canva}}}
+        \resumeItemListEnd
+        }}
+    \end{itemize}
+    \vspace{-5pt}
+
+
+
+%-----------CERTIFICATIONS and ACHIEVEMENTS---------------
+\section{CERTIFICATIONS AND ACHIEVEMENTS}
+\vspace{2.5pt}
+\resumeItemListStart 
+    \resumeItem{\href{https://www.credly.com/badges/dc22fd53-b367-4c97-b2ef-066a59371946/public_url}{\textbf{Solutions Architect Associate (SAA-C03)} - Amazon Web Services (AWS) {\raisebox{-0.1\height}\faExternalLink }}} \vspace{-3pt}
+    
+    \resumeItem{\href{https://www.credly.com/badges/d0f572c3-7d2c-416c-803d-4963611704f5/public_url}{\textbf{Certified Cloud Practitioner (CLF-C02)} - Amazon Web Services (AWS) {\raisebox{-0.1\height}\faExternalLink }}} \vspace{-3pt}
+    
+    \resumeItem{\normalsize{2023 Yantra "Main Hack" - Education Track Winner (\href{https://github.com/kaushalrathi24/funtimeError}{Career Node}), VIT - Vellore \href{https://github.com/kaushalrathi24/funtimeError}{\raisebox{-0.1\height}\faExternalLink }}} \vspace{-3pt}
+    
+    %\resumeItem{\href{certificateLink.com}{Certified Ethical Hacker (CEH) - EC-Council (Pursuing)}} \vspace{-3pt}
+    
+\resumeItemListEnd
+\vspace{-2pt}
+
+
+
+%-----------EXTRA CURRICULAR-----------
+\section{EXTRA CURRICULAR}
+    \vspace{2.5pt}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+            {Association for Computing Machinery - Student Chapter }{June, 2022 -- Oct, 2024}
+            {\uniformunderline{Research Lead}}
+            {VIT, Vellore}
+            \vspace{0pt}
+            \resumeItemListStart
+                
+                % \resumeItem{\normalsize{Organized diverse events and managed projects.}} \\
+                % \vspace{-10pt}
+                
+                \resumeItem{\normalsize{Developed questions for the Reverse Coding (RC) contest with 500+ contestants.\textcolor{blue}{\small{\textit{*}}}}}
+                \vspace{0.5pt}
+                
+                \resumeItem{\normalsize{Built CI/CD pipelines for RC using GitHub Actions, Docker, and CMake for multi-platform question binaries.}}
+                \vspace{-10pt}
+                
+                \resumeItem{\normalsize{Facilitated Cryptic Hunt - a 3-day, annual, campus-wide, hybrid treasure hunt, with 700+ participants.}}
+                \vspace{0.5pt}
+                
+                \resumeItem{\normalsize{Speaker and organiser at CodexCryptum, a cryptography and cybersecurity bootcamp, for 2 years.}}
+                \vspace{0.5pt}
+                
+                % \resumeItem{\normalsize{Played key roles in hackathons as a participant, review panel member, and event manager.}}
+                % \vspace{0.5pt}
+                
+                % \resumeItem{\normalsize{Participated in Capture The Flag competitions, following my passion for research and problem-solving.}}
+
+                % \resumeItem{\normalsize{Participated in ACM Winter School - a 12-day cryptography and cybersecurity bootcamp, oraganized by ACM-India at VIT, Vellore. }} % - add content about what concepts and tools I actually learnt about
+                
+                \vspace{0.5pt}
+            
+        \resumeItemListEnd
+        \vspace{-5pt}
+        
+        % \resumeSubheading
+        %     {The Next Chapter - Literature Club }{June, 2022 -- Feb, 2024}{\uniformunderline{Co-Secretary}}{VIT, Vellore}
+        %     % \vspace{-3pt}
+        %     \resumeItemListStart
+        %         \resumeItem{\normalsize{Coordinated internal management between departments as Co-Secretary.}}
+                
+        %         \resumeItem{\normalsize{Participated in discussions and wrote editorials, organized literary events, and created promotional posts, stories, and digital content, while working with the Editorial, Management, and Design departments.}}
+                
+        %         \resumeItem{\normalsize{Managed the club’s Instagram page.}}
+                
+        %     \resumeItemListEnd 
+        %     % \vspace{-5pt}
+
+    \resumeSubHeadingListEnd
+    \vspace{-5pt}
+
+
+
+%-----------ATS-----------
+% \begingroup
+% % Sections formatting
+% \titleformat{\section}{
+%   \vspace{-4pt}\scshape\raggedright\large\bfseries
+% }{}{0em}{}[\color{white}\titlerule \vspace{-5pt}]
+
+% \textcolor{white}{\section{SKILLS}
+%     \vspace{-17.5pt}
+%     \resumeItemListStart
+%     \vspace{-17.5pt}
+%         \resumeItem{\normalsize{Languages: English, Hindi, Tamil}} \vspace{-17.5pt}
+%         \resumeItem{\normalsize{Technical Skills: JavaScript, HTML, CSS, ReactJS, Astro}} \vspace{-17.5pt}
+%         \resumeItem{\normalsize{Technical Competencies: Vulnerability Analysis, Penetration Testing, Network Security, CI/CD, Configuration Management, Infrastructure as Code, Competitive Coding}} \vspace{-17.5pt}
+%         \resumeItem{\normalsize{Tools: Figma, Photoshop, Illustrator, Canva, Infoga, Ida, Kubernetes, VMWare}} \vspace{-17.5pt}
+%         \resumeItem{\normalsize{Soft Skills: Decision Making, Project Management, Leadership, Teamwork, Attention to Detail, Problem Solving}} \vspace{-17.5pt}
+%         \resumeItem{\normalsize{Qualifications: CEH (Certified Ethical Hacker), eJPT (e-Learn Junior Penetration Tester)}} \vspace{-17.5pt}
+%         % \resumeItem{\normalsize{Hobbies: Guitar, Music, Reading, Table Tennis, Badminton}} \vspace{-17.5pt}
+%     \resumeItemListEnd
+%     \vspace{-17.5pt}
+%     }
+% \endgroup
+
+
+
+\end{document} 
+
+
+
+%----------------------------------------
