@@ -161,32 +161,34 @@ const extraCurricularData = [
               </div>
               
               <!-- Organization Icon -->
-              {activity.icon && activity.icon !== null ? (
-                {activity.icon.light && activity.icon.light !== null ? (
-                  <div class="relative">
-                    <img src={activity.icon.light} alt="Organization logo" class="w-48 h-24 object-contain dark:hidden" />
-                  </div>
-                ) : (
-                  <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg dark:hidden">
-                    {activity.iconPlaceholder}
-                  </div>
-                )}
-                {activity.icon.dark && activity.icon.dark !== null ? (
-                  <div class="relative">
-                    <img src={activity.icon.dark} alt="Organization logo" class="w-48 h-24 object-contain hidden dark:block" />
-                  </div>
-                ) : (
-                  <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg hidden dark:block">
-                    {activity.iconPlaceholder}
-                  </div>
-                )}
+              {activity.icon ? (
+                <div class="relative">
+                  {activity.icon.light ? (
+                    <>
+                      <img src={activity.icon.light} alt="Organization logo" class="w-48 h-24 object-contain dark:hidden" />
+                    </>
+                  ) : (
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg dark:hidden">
+                      {activity.iconPlaceholder}
+                    </div>
+                  )}
+                  {activity.icon.dark ? (
+                    <>
+                      <img src={activity.icon.dark} alt="Organization logo" class="w-48 h-24 object-contain hidden dark:block" />
+                    </>
+                  ) : (
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg hidden dark:block">
+                      {activity.iconPlaceholder}
+                    </div>
+                  )}
+                </div>
               ) : (
                 <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                   {activity.iconPlaceholder}
                 </div>
               )}
             </div>
-            
+
             <!-- Achievements -->
             <div class="space-y-3">
               {activity.achievements.map((achievement) => (
