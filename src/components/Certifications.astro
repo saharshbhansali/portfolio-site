@@ -33,7 +33,11 @@ const extraCurricularData = [
     role: "Research Lead",
     duration: "June, 2022 - Oct, 2024",
     location: "VIT, Vellore",
-    icon: "/acm-logo.svg",
+    icon: {
+        light: "/acm-logo.svg",
+        dark: "/acm-logo-dark-mode.svg"
+    },
+    iconPlaceholder: "ACM",
     achievements: [
       "Developed questions for the Reverse Coding (RC) contest with 500+ contestants.",
       "Built CI/CD pipelines for RC using GitHub Actions, Docker, and CMake for multi-platform question binaries.",
@@ -158,13 +162,27 @@ const extraCurricularData = [
               
               <!-- Organization Icon -->
               {activity.icon && activity.icon !== null ? (
-                <div class="relative">
-                  <img src="/acm-logo.svg" alt="Organization logo" class="w-48 h-24 object-contain dark:hidden" />
-                  <img src="/acm-logo-dark-mode.svg" alt="Organization logo" class="w-48 h-24 object-contain hidden dark:block" />
-                </div>
+                {activity.icon.light && activity.icon.light !== null ? (
+                  <div class="relative">
+                    <img src={activity.icon.light} alt="Organization logo" class="w-48 h-24 object-contain dark:hidden" />
+                  </div>
+                ) : (
+                  <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg dark:hidden">
+                    {activity.iconPlaceholder}
+                  </div>
+                )}
+                {activity.icon.dark && activity.icon.dark !== null ? (
+                  <div class="relative">
+                    <img src={activity.icon.dark} alt="Organization logo" class="w-48 h-24 object-contain hidden dark:block" />
+                  </div>
+                ) : (
+                  <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg hidden dark:block">
+                    {activity.iconPlaceholder}
+                  </div>
+                )}
               ) : (
                 <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                  ACM
+                  {activity.iconPlaceholder}
                 </div>
               )}
             </div>
