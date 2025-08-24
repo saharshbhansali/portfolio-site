@@ -4,7 +4,7 @@ const projectsData = [
   {
     title: "Decentralized Voting",
     description: "Built an API for a decentralized referendum platform using alternative voting systems.",
-    duration: "Sept, 2024 -- Nov, 2024",
+    duration: "Sept, 2024 - Nov, 2024",
     technologies: ["FastAPI", "PyTest", "Docker", "Jupyter Notebook"],
     github: "https://github.com/saharshbhansali/bohemian-backend",
     features: [
@@ -19,22 +19,21 @@ const projectsData = [
     description: "Unofficial CLI to access the university's Learning Management System (LMS); used by 400+ students.",
     duration: "Dec, 2023 - Jan, 2024",
     technologies: ["Go", "Cobra", "Glamour", "GitHub Actions", "BurpSuite"],
-    github: "https://github.com/ACM-VIT/cli-top",
+    // github: "https://github.com/ACM-VIT/cli-top",
     demo: "https://cli-top.acmvit.in",
     features: [
       "Unofficial CLI to access the university's Learning Management System (LMS); used by 400+ students.",
-      "Developed key features -- autologin, attendance alert, kill-switch for centralized control, and mark totaling.",
+      "Developed key features - autologin, attendance alert, kill-switch for centralized control, and mark totaling.",
       "Built a CI/CD pipeline to distribute binaries using GitHub Actions."
     ]
   },
   {
-    title: "Inventory Management System",
+    title: "Inventory Management",
     description: "Experimental inventory management system, to self-learn full stack development.",
     duration: "Sept, 2023 - Dec, 2023",
     technologies: ["Go", "NextJS", "TypeScript", "TailwindCSS", "Docker"],
     github: "https://github.com/saharshbhansali/TallyStock",
     features: [
-      "Experimental inventory management system, to self-learn full stack development.",
       "A Dockerized Go API using gofiber and gorm, and NextJS frontend using MaterialUI and ShadcnUI."
     ]
   }
@@ -84,7 +83,7 @@ const projectsData = [
               </div>
             </div>
             
-            <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+            <p class="text-gray-600 dark:text-gray-300 mb-4 max-h-[35%] leading-relaxed">
               {project.description}
             </p>
             
@@ -104,7 +103,7 @@ const projectsData = [
             
             <!-- Features -->
             <div class="space-y-2">
-              {project.features.slice(0, 2).map((feature) => (
+              {project.features.slice(0, 3).map((feature) => (
                 <div class="flex items-start gap-2">
                   <div class="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                   <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -112,9 +111,9 @@ const projectsData = [
                   </p>
                 </div>
               ))}
-              {project.features.length > 2 && (
+              {project.features.length > 3 && (
                 <p class="text-sm text-gray-500 dark:text-gray-400 italic">
-                  +{project.features.length - 2} more features
+                  +{project.features.length - 3} more feature{project.features.length - 3 > 1 ? 's' : ''}
                 </p>
               )}
             </div>
