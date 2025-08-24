@@ -4,6 +4,9 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
+// Import dark mode toggle
+import DarkModeToggle from '../components/DarkModeToggle.astro';
 ---
 
 <!DOCTYPE html>
@@ -61,12 +64,17 @@ const { title } = Astro.props;
     </script>
   </head>
   <body class="font-['Inter'] antialiased">
+    <DarkModeToggle />
     <slot />
     
     <script>
-      // Dark mode toggle functionality
+      // Initialize dark mode on page load
       if (typeof window !== 'undefined') {
-        const theme = localStorage.getItem('theme') || 'light';
+        // Check for saved theme preference or default to system preference
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+        
         document.documentElement.classList.toggle('dark', theme === 'dark');
       }
     </script>
