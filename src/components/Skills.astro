@@ -37,7 +37,7 @@ const skillCategories = [
 ];
 ---
 
-<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-900">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -48,9 +48,9 @@ const skillCategories = [
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {skillCategories.map((category) => (
-        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <div class="bg-white dark:bg-dark-950 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
           <div class="flex items-center gap-3 mb-6">
-            <div class={`w-12 h-12 bg-${category.color}-100 dark:bg-${category.color}-900 rounded-lg flex items-center justify-center`}>
+            <div class={`w-12 h-12 bg-${category.color}-100 dark:bg-${category.color}-900/30 rounded-lg flex items-center justify-center`}>
               <i class={`${category.icon} text-${category.color}-600 dark:text-${category.color}-400 text-xl`}></i>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">
@@ -60,7 +60,7 @@ const skillCategories = [
           
           <div class="flex flex-wrap gap-2">
             {category.skills.map((skill) => (
-              <span class={`px-3 py-1 bg-${category.color}-100 dark:bg-${category.color}-900 text-${category.color}-800 dark:text-${category.color}-200 rounded-full text-sm font-medium hover:scale-105 transition-transform duration-200`}>
+              <span class={`px-3 py-1 bg-${category.color}-100 dark:bg-${category.color}-900/30 text-${category.color}-800 dark:text-${category.color}-200 rounded-full text-sm font-medium hover:scale-105 transition-transform duration-200`}>
                 {skill}
               </span>
             ))}
@@ -70,14 +70,14 @@ const skillCategories = [
     </div>
     
     <!-- Additional Skills Section -->
-    <div class="mt-16 bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
+    <div class="mt-16 bg-white dark:bg-dark-950 rounded-2xl shadow-lg p-8">
       <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
         Additional Competencies
       </h3>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="text-center">
-          <div class="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-red-100 dark:bg-red-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-shield-alt text-red-600 dark:text-red-400 text-2xl"></i>
           </div>
           <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Cybersecurity</h4>
@@ -85,7 +85,7 @@ const skillCategories = [
         </div>
         
         <div class="text-center">
-          <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-cloud text-orange-600 dark:text-orange-400 text-2xl"></i>
           </div>
           <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Cloud & DevOps</h4>
@@ -93,7 +93,7 @@ const skillCategories = [
         </div>
         
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-database text-blue-600 dark:text-blue-400 text-2xl"></i>
           </div>
           <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Data & Analytics</h4>
@@ -101,7 +101,7 @@ const skillCategories = [
         </div>
         
         <div class="text-center">
-          <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
             <i class="fas fa-users text-green-600 dark:text-green-400 text-2xl"></i>
           </div>
           <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Leadership</h4>
