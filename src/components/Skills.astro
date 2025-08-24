@@ -37,7 +37,7 @@ const skillCategories = [
 ];
 ---
 
-<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+<section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-dark-900">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -48,7 +48,7 @@ const skillCategories = [
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {skillCategories.map((category) => (
-        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+        <div class="bg-white dark:bg-dark-950 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
           <div class="flex items-center gap-3 mb-6">
             <div class={`w-12 h-12 bg-${category.color}-100 dark:bg-${category.color}-900 rounded-lg flex items-center justify-center`}>
               <i class={`${category.icon} text-${category.color}-600 dark:text-${category.color}-400 text-xl`}></i>
@@ -70,7 +70,7 @@ const skillCategories = [
     </div>
     
     <!-- Additional Skills Section -->
-    <div class="mt-16 bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8">
+    <div class="mt-16 bg-white dark:bg-dark-950 rounded-2xl shadow-lg p-8">
       <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
         Additional Competencies
       </h3>

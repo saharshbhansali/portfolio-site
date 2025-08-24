@@ -56,6 +56,20 @@ import DarkModeToggle from '../components/DarkModeToggle.astro';
               'darkcolor': '#0F4539',
               'cvgreen': '#3BD80D',
               'taggreen': '#00E278',
+              // Custom dark mode colors
+              'dark': {
+                50: '#f8f9fa',
+                100: '#f1f3f4',
+                200: '#e8eaed',
+                300: '#dadce0',
+                400: '#bdc1c6',
+                500: '#9aa0a6',
+                600: '#80868b',
+                700: '#5f6368',
+                800: '#3c4043',
+                900: '#202124',
+                950: '#171717',
+              }
             }
           }
         },
@@ -117,14 +131,14 @@ import DarkModeToggle from '../components/DarkModeToggle.astro';
   }
   
   .dark ::-webkit-scrollbar-track {
-    background: #1e293b;
+    background: #202124;
   }
   
   .dark ::-webkit-scrollbar-thumb {
-    background: #475569;
+    background: #5f6368;
   }
   
   .dark ::-webkit-scrollbar-thumb:hover {
-    background: #64748b;
+    background: #80868b;
   }
 </style> 
