@@ -7,6 +7,10 @@ const educationData = [
     duration: "July, 2021 - July, 2025",
     location: "Vellore, India",
     cgpa: "9.18",
+    icon: {
+      light: "/vit-logo.svg",
+      dark: "/vit-logo-dark-mode.svg"
+    },
     highlights: [
       "Focus on Computer Science and Engineering",
       "Active participation in ACM Student Chapter",
@@ -19,6 +23,10 @@ const educationData = [
     duration: "June, 2019 - June, 2021",
     location: "Chennai, India",
     percentage: "96.4%",
+    icon: {
+      light: "/brv-logo.svg",
+      dark: "/brv-logo-dark-mode.svg"
+    },
     highlights: [
       "Strong foundation in Science and Mathematics",
       "Early exposure to Computer Science",
@@ -73,8 +81,38 @@ const educationData = [
             </div>
             
             <!-- Institution Icon -->
-            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-              {edu.institution.split(' ').map(word => word[0]).join('').slice(0, 2)}
+            <div class="w-16 h-16 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              {/* <img 
+                src={edu.icon}
+                alt="Education"
+                class="w-16 h-16 object-contain edu-logo" 
+              /> */}
+              {edu.icon ? (
+                <div class="relative">
+                  {edu.icon.light ? (
+                    <>
+                      <img src={edu.icon.light} alt="Education" class="w-48 h-24 object-contain dark:hidden" />
+                    </>
+                  ) : (
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg dark:hidden">
+                      {edu.iconPlaceholder}
+                    </div>
+                  )}
+                  {edu.icon.dark ? (
+                    <>
+                      <img src={edu.icon.dark} alt="Education" class="w-48 h-24 object-contain hidden dark:block" />
+                    </>
+                  ) : (
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg hidden dark:block">
+                      {edu.iconPlaceholder}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                  {edu.iconPlaceholder}
+                </div>
+              )}
             </div>
           </div>
           
@@ -126,4 +164,4 @@ const educationData = [
       </div>
     </div>
   </div>
-</section> 
+</section>
