@@ -9,7 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.12.9"
+    "@astrojs/react": "^4.3.0",
+    "astro": "^5.12.9",
+    "framer-motion": "^12.23.12"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
