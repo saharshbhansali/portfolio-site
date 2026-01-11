@@ -22,3 +22,13 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# LaTeX files
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+/resume.pdf
+

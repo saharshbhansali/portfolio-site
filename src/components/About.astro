@@ -1,8 +1,9 @@
 ---
-// About section data
+// About data
 const aboutData = {
   title: "About Me",
-  description: "Cybersecurity, DevOps, System Administration and Cloud technology enthusiast. I enjoy ricing my OS (I use NixOS BTW) and tinkering with cutting edge technologies and frameworks.",
+  description:
+    "Cybersecurity, DevOps, System Administration and Cloud technology enthusiast. I enjoy ricing my OS (I use NixOS BTW) and tinkering with cutting edge technologies and frameworks.",
   highlights: [
     "Analyst at Bain & Company (BCN)",
     "Bachelor of Technology in Computer Science and Engineering at Vellore Institute of Technology, Vellore with a CGPA of 9.18",
@@ -10,94 +11,124 @@ const aboutData = {
     "Passionate about cybersecurity and ethical hacking",
     "AWS Solutions Architect Associate certified",
     "Ex-Research Lead at ACM-VIT (Student Chapter)",
-  ]
+  ],
+  skills: [
+    { name: "Python", level: "Advanced", percent: 90, color: "bg-blue-500" },
+    { name: "Go", level: "Intermediate", percent: 75, color: "bg-purple-500" },
+    { name: "JavaScript/TypeScript", level: "Intermediate", percent: 80, color: "bg-green-500" },
+    { name: "AWS/Cloud", level: "Intermediate", percent: 85, color: "bg-orange-500" },
+    { name: "Cybersecurity", level: "Intermediate", percent: 70, color: "bg-red-500" },
+  ],
 };
 ---
 
 <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-950">
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-16">
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 animate-slide-down">
         {aboutData.title}
       </h2>
-      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto animate-scale-x"></div>
     </div>
-    
     <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- Description -->
-      <div>
-        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+      <div class="space-y-4">
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 animate-slide-up" style="animation-delay: 0.1s;">
           {aboutData.description}
         </p>
-        
+        {aboutData.highlights.map((highlight, idx) => (
+          <div class="flex items-start gap-3 animate-slide-up" style={`animation-delay: ${(idx * 0.1) + 0.2}s;`}>
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+            <p class="text-gray-600 dark:text-gray-300">{highlight}</p>
+          </div>
+        ))}
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-dark-900 dark:to-dark-800 rounded-2xl p-8 animate-slide-up" style="animation-delay: 0.8s;">
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+          Skills Overview
+        </h3>
         <div class="space-y-4">
-          {aboutData.highlights.map((highlight) => (
-            <div class="flex items-start gap-3">
-              <div class="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-              <p class="text-gray-600 dark:text-gray-300">{highlight}</p>
+          {aboutData.skills.map((skill, idx) => (
+            <div class="animate-fill" style={`animation-delay: ${(idx * 0.1) + 0.9}s; --skill-percent: ${skill.percent}%;`}>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
+                <span class="text-sm text-gray-500 dark:text-gray-400">{skill.level}</span>
+              </div>
+              <div class="w-full bg-gray-200 dark:bg-dark-700 rounded-full h-2">
+                <div class={`${skill.color} h-2 rounded-full skill-bar`}></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
-      
-      <!-- Skills Preview -->
-      <div class="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-dark-900 dark:to-dark-800 rounded-2xl p-8">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-          Quick Skills Overview
-        </h3>
-        
-        <div class="space-y-4">
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Python</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Advanced</span>
-            </div>
-            <div class="w-full bg-gray-200 dark:bg-dark-700 rounded-full h-2">
-              <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
-            </div>
-          </div>
-          
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Go</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Intermediate</span>
-            </div>
-            <div class="w-full bg-gray-200 dark:bg-dark-700 rounded-full h-2">
-              <div class="bg-purple-500 h-2 rounded-full" style="width: 75%"></div>
-            </div>
-          </div>
-          
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">JavaScript/TypeScript</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Intermediate</span>
-            </div>
-            <div class="w-full bg-gray-200 dark:bg-dark-700 rounded-full h-2">
-              <div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
-            </div>
-          </div>
-          
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">AWS/Cloud</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Intermediate</span>
-            </div>
-            <div class="w-full bg-gray-200 dark:bg-dark-700 rounded-full h-2">
-              <div class="bg-orange-500 h-2 rounded-full" style="width: 85%"></div>
-            </div>
-          </div>
-          
-          <div>
-            <div class="flex justify-between items-center mb-2">
-              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Cybersecurity</span>
-              <span class="text-sm text-gray-500 dark:text-gray-400">Intermediate</span>
-            </div>
-            <div class="w-full bg-gray-200 dark:bg-dark-700 rounded-full h-2">
-              <div class="bg-red-500 h-2 rounded-full" style="width: 70%"></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</section> 
+</section>
+
+<style>
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-40px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes scale-x {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @keyframes fill {
+    from {
+      width: 0;
+    }
+    to {
+      width: var(--skill-percent);
+    }
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .animate-scale-x {
+    animation: scale-x 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+    transform-origin: left;
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slide-up 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  }
+
+  .animate-fill {
+    opacity: 1;
+  }
+
+  .skill-bar {
+    animation: fill 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    width: 0;
+  }
+</style>
