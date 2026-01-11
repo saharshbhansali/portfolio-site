@@ -113,7 +113,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{\large#1} & \textbf{\small #2} \\
       \textit{\large#3} & \textit{\small #4} \\
@@ -136,7 +136,7 @@
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3.5pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -178,7 +178,7 @@
         % \href{https://www.hackerrank.com/yourid}{\raisebox{-0.2\height}\faHackerrank\ \uniformunderline{yourid}} ~\
         \
         % \href{https://codeforces.com/profile/yourid}{\raisebox{-0.2\height}\faPoll\ \uniformunderline{yourid}} ~
-\vspace{1pt}
+\vspace{5pt}
 \end{center}
 
 
@@ -190,24 +190,24 @@
 
         \resumeSubheading
             {Bain \& Company (BCN)}{Jan, 2025 -- Present} 
-            {\uniformunderline{Analyst} $|$ \textnormal{Pandas, SQL, PySpark, FastAPI, Docker, Azure, GCP, Plotly-Dash, NextJS } } {On-site}
+            {\uniformunderline{Analyst} $|$ \textnormal{Pandas, SQL, PySpark, FastAPI, Azure, GCP, Docker, Plotly-Dash, NextJS } } {On-site}
             \resumeItemListStart
-                \resumeItem{\normalsize{Built and deployed a SparkSQL ETL framework on GCP (Dataproc, BigQuery) for a large US retailer, \\using PyTest \& GitHub Actions for CI/CD.}}
-                \resumeItem{\normalsize{Integrated ETL pipeline execution with a custom orchestration system, validated across test and production cloud environments, and led on-site handover sessions.}}
+                \resumeItem{\normalsize{Built and deployed a SparkSQL ETL framework on GCP (Dataproc, BigQuery) for a large US retailer, \newline using PyTest \& GitHub Actions for CI/CD.}}
+                \resumeItem{\normalsize{Integrated ETL pipeline execution with a custom orchestration system, validated in test and production cloud environments, and led on-site handover sessions (20 hrs).}}
                 \resumeItem{\normalsize{Implemented a DuckDB- and SQL-based ETL pipeline for a UK \& Ireland retailer, orchestrating SQL execution via Python for lightweight analytics workloads.}}
-                \resumeItem{\normalsize{Developed dashboards using Pandas and Plotly-Dash/ReactJS migrating out of Tableau, with a projected savings opportunity of \$200K per annum in licensing costs.}}
-                \resumeItem{\normalsize{Deployed and maintained multiple tools with Docker and Azure. Optimized existing tools' performance \\(10x latency reduction) and scalability (multi-user support and load balancing).}}
+                \resumeItem{\normalsize{Developed dashboards using Pandas and Plotly-Dash/ReactJS migrating out of Tableau, resulting in \newline \$200K per annum saved in licensing costs.}}
+                \resumeItem{\normalsize{Deployed and maintained multiple tools with Docker and Azure. Optimized existing tools for performance (10x latency reduction) and scalability (multi-user support and load balancing).}}
                 \resumeItem{\normalsize{Integrated AI into toolkits using OpenAI Chat- \& Responses-APIs, LangChain, and LangGraph.}}
             \resumeItemListEnd
 
         \resumeSubheading
             {Stealth Startup}{June, 2024 -- Dec, 2024} 
-            {\uniformunderline{Freelance} $|$ \textnormal{AWS, Django, PyTest, Nginx, Docker \href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{\footnotesize{\raisebox{-0.05\height}\faExternalLink}}} }{Remote}
+            {\uniformunderline{Freelance} $|$ \textnormal{\href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{AWS, Django, PyTest, Nginx, Docker \footnotesize{\raisebox{-0.05\height}\faExternalLink}}} }{Remote}
             \resumeItemListStart
                 \resumeItem{\normalsize{Provisioned cloud and security infrastructure. Set up API servers and reverse-proxy for different endpoints.}}
-                \resumeItem{\normalsize{\href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{Dockerized and self-hosted a Supabase instance}, with an externally managed Postgres database on a local docker network. Integrated API with Supabase (Database, Realtime, \& Auth) APIs.}} 
+                \resumeItem{\normalsize{\href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{Dockerized and self-hosted a Supabase instance}, with an externally managed Postgres database on a local docker network. Integrated API with Supabase (Database, Realtime, \& Auth) APIs}} 
                 % \href{https://github.com/saharshbhansali/supabase-decoupled-postgres}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}
-                \resumeItem{\normalsize{Created a unit-test suite the API using PyTest and Django's testing framework.}}
+                \resumeItem{\normalsize{Created a unit-test suite for the API using PyTest and Django's testing framework.}}
             \resumeItemListEnd  
 
     
@@ -221,7 +221,7 @@
         %     \resumeItemListEnd  
  
     \resumeSubHeadingListEnd
-    \vspace{-15pt}
+    \vspace{-12.5pt}
 
 
 
@@ -232,7 +232,7 @@
     \resumeSubHeadingListStart
 
         \resumeProjectHeading
-            {\href{https://github.com/saharshbhansali/bohemian-backend}{\textbf{\large{Decentralized Voting}} \href{https://github.com/saharshbhansali/bohemian-backend}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}} $|$ \normalsize{FastAPI, PyTest, Docker,  \href{https://colab.research.google.com/github/saharshbhansali/bohemian-referendums/blob/main/ranked-choice.ipynb}{\textbf{Jupyter Notebook}}} {\footnotesize{\raisebox{-0.1\height}\faExternalLink}}}{Sept, 2024 -- Nov, 2024}
+            {\href{https://github.com/saharshbhansali/bohemian-backend}{\textbf{\large{Decentralized Voting}} \footnotesize{\raisebox{-0.1\height}\faExternalLink}} $|$ \normalsize{FastAPI, PyTest, Docker,  \href{https://colab.research.google.com/github/saharshbhansali/bohemian-referendums/blob/main/ranked-choice.ipynb}{\textbf{Jupyter Notebook} \footnotesize{\raisebox{-0.1\height}\faExternalLink}}}}{Sept, 2024 -- Nov, 2024}
             \vspace{-11pt}
             \resumeItemListStart
                 \resumeItem{\normalsize{Built an API for a decentralized referendum platform using alternative voting systems.}} 
@@ -244,7 +244,7 @@
             \vspace{-12.5pt}
 
         \resumeProjectHeading
-            {\href{https://cli-top.acmvit.in}{\textbf{\large{CLI - Top}} \href{https://cli-top.acmvit.in}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}} $|$ \normalsize{\href{https://github.com/ACM-VIT/cli-top}{Go, Cobra, Glamour, GitHub Actions, BurpSuite}}\textcolor{blue}{\small{\textit{*}}}}{Dec, 2023 - Jan, 2024}
+            {\href{https://cli-top.acmvit.in}{\textbf{\large{CLI - Top}} \href{https://cli-top.acmvit.in}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}} $|$ \normalsize{\href{https://github.com/ACM-VIT/cli-top}{Go, Cobra, Glamour, GitHub Actions, BurpSuite}}\textcolor{blue}{\small{\textit{*}}}}{Dec, 2023 -- Jan, 2024}
             \vspace{-11pt}
             \resumeItemListStart
                 \resumeItem{\normalsize{\textbf{Unofficial} CLI to access the university's Learning Management System (LMS); used by 400+ students.}} 
@@ -285,23 +285,18 @@
         %         % \resumeItem{\textcolor{accent} {\href{https://github.com/ACM-VIT/accessDenied/archive/refs/heads/main.zip} {\uniformunderline{\normalsize{Download}}}}}
         %     \resumeItemListEnd
         %     \vspace{-15pt}
-          
+
         \resumeProjectHeading
             {\textbf{\large{Self-Taught Tinkerer}}\textcolor{blue}{\small{\textit{*}}}}
-            { }
+            {~}
             \vspace{-11pt}
             \resumeItemListStart 
-                \resumeItem{\normalsize{\href{https://github.com/saharshbhansali/.dotfiles}{\textbf{System Administration}} \href{https://github.com/saharshbhansali/.dotfiles}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}} $|$ Shell Scripting, Chezmoi, GNU Stow, Nix, Ansible: A development setup and streamlined workflow, with automated configuration management, rapidly deployable on multiple platforms.}} \vspace{-11pt} \
-                
-                \resumeItem{\normalsize{\textbf{Home Labs, CTFs, and Bug Bounties} $|$ BurpSuite, Ghidra, Metasploit, JohnTheRipper, Gobuster, Exiftool, ReconDog, VirtualBox, ParrotOS, Kali Linux: Learning cyber-security through hands-on exercises.}} \vspace{-11pt} \
-                
-                % \resumeItem{\normalsize{\href{https://saharshbhansali.github.io/about-me/}{\textbf{Personal Site}} \href{https://saharshbhansali.github.io/about-me/}{\raisebox{-0.1\height}\faExternalLink} $|$ Jekyll, Markdown, GitHub Pages, LaTeX: A static website to showcase my professional profile and skills.}} \ 
-                
-                % \resumeItem{\normalsize{\href{https://gist.github.com/saharshbhansali/5da604f1731c7d5ea07b2bd91552d48c}{\textbf{Obsidian Notes}} \href{https://gist.github.com/saharshbhansali/5da604f1731c7d5ea07b2bd91552d48c}{\raisebox{-0.1\height}\faExternalLink}: A formatting guide for a note-taking app, Obsidian.}} \
-                
+                \resumeItem{\normalsize{\href{https://github.com/saharshbhansali/.dotfiles}{\textbf{System Administration}} \href{https://github.com/saharshbhansali/.dotfiles}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}} $|$ Shell Scripting, Chezmoi, GNU Stow, Nix, Ansible: A development setup and streamlined workflow, with automated configuration management, rapidly deployable on multiple platforms.}} \vspace{-11pt}
+                \resumeItem{\normalsize{\textbf{Home Labs, CTFs, and Bug Bounties} $|$ BurpSuite, Ghidra, Metasploit, JohnTheRipper, Gobuster, Exiftool, ReconDog, VirtualBox, ParrotOS, Kali Linux: Learning cyber-security through hands-on exercises.}} \vspace{-12.5pt}
+                % \resumeItem{\normalsize{\href{https://saharshbhansali.github.io/about-me/}{\textbf{Personal Site}} \href{https://saharshbhansali.github.io/about-me/}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}} $|$ Jekyll, Markdown, GitHub Pages, LaTeX: A static website to showcase my professional profile and skills.}} \ 
+                % \resumeItem{\normalsize{\href{https://gist.github.com/saharshbhansali/5da604f1731c7d5ea07b2bd91552d48c}{\textbf{Obsidian Notes}} \href{https://gist.github.com/saharshbhansali/5da604f1731c7d5ea07b2bd91552d48c}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}: A formatting guide for a note-taking app, Obsidian.}} \
             \resumeItemListEnd
             \vspace{-15pt}
-
 
         % \resumeProjectHeading
         %     {\href{https://github.com/saharshbhansali/.dotfiles}{\textbf{\large{\uniformunderline{System Administration}}} \href{https://github.com/saharshbhansali/.dotfiles}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}} $|$ \normalsize{\uniformunderline{Shell Scripting, Python, Configuration Files}}}{Dec, 2022}
@@ -320,41 +315,27 @@
 %-----------TECHNICAL SKILLS-----------
 \section{TECHNICAL SKILLS}
     \vspace{2.5pt}
-    \begin{itemize}[leftmargin=0in, label={}]
-    \item{
-        \resumeItemListStart
-            \resumeItem{\normalsize{\textbf{Technologies and Frameworks:} Git, Docker, AWS, Azure, GCP, FastAPI, PySpark, Pandas, NextJS, ReactJS, Plotly-Dash, Redis, OpenAI API, LangChain, LangGraph, Alteryx, Tableau, PowerBI, BurpSuite, Nessus, Ghidra, Metasploit, JohnTheRipper, Gobuster, Exiftool, Infoga, ReconDog}} \vspace{0.5pt} \\
-
-            \resumeItem{\normalsize{\textbf{Languages:} Python, Shell Scripting, C/C++, Go, Java, TypeScript, SQL, NoSQL, R}} \vspace{0.5pt} \\
-
-            \resumeItem{\normalsize{\textbf{Developer Tools:} VMWare, VirtualBox, Linux, GitHub, Neovim, Excel}} \vspace{0.5pt} \\
-
-            % \resumeItem{\textbf{\normalsize{Design:}}{ \normalsize{Figma, Photoshop, Illustrator, Canva}}}
-        \resumeItemListEnd
-        }
-    \end{itemize}
-    \vspace{-5pt}
+    \resumeItemListStart
+        \resumeItem{\normalsize{\textbf{Technologies and Frameworks:} Git, Docker, AWS, Azure, GCP, FastAPI, PySpark, Pandas, NextJS, ReactJS, Plotly-Dash, Redis, OpenAI API, LangChain, LangGraph, Alteryx, Tableau, PowerBI, BurpSuite, Nessus, Ghidra, Metasploit, JohnTheRipper, Gobuster, Exiftool, Infoga, ReconDog}} \vspace{-5pt}
+        \resumeItem{\normalsize{\textbf{Languages:} Python, Shell Scripting, C/C++, Go, Java, TypeScript, SQL, NoSQL, R}} \vspace{-5pt}
+        \resumeItem{\normalsize{\textbf{Developer Tools:} VMWare, VirtualBox, Linux, GitHub, Neovim, Excel}} \vspace{-5pt}
+        % \resumeItem{\textbf{\normalsize{Design:}}{ \normalsize{Figma, Photoshop, Illustrator, Canva}}}
+    \resumeItemListEnd
+    \vspace{-2.5pt}
 
 
 
 %-----------CERTIFICATIONS and ACHIEVEMENTS---------------
 % \section{CERTIFICATIONS AND ACHIEVEMENTS}
 \section{CERTIFICATIONS}
-\vspace{2.5pt}
-\begin{itemize}[leftmargin=0in, label={}]
-\item{
+    \vspace{2.5pt}
     \resumeItemListStart 
-        \resumeItem{\normalsize{\href{https://www.credly.com/badges/dc22fd53-b367-4c97-b2ef-066a59371946/public_url}{\textbf{Solutions Architect Associate (SAA-C03)} - Amazon Web Services (AWS) {\footnotesize{\raisebox{-0.1\height}\faExternalLink}}}}} \vspace{0.5pt}
-        
-        \resumeItem{\normalsize{\href{https://www.credly.com/badges/d0f572c3-7d2c-416c-803d-4963611704f5/public_url}{\textbf{Certified Cloud Practitioner (CLF-C02)} - Amazon Web Services (AWS) {\footnotesize{\raisebox{-0.1\height}\faExternalLink}}}}} \vspace{0.5pt}
-        
-        % \resumeItem{\normalsize{2023 Yantra "Main Hack" - Education Track Winner (\href{https://github.com/kaushalrathi24/funtimeError}{Career Node}), VIT - Vellore \href{https://github.com/kaushalrathi24/funtimeError}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}}} \vspace{-3pt}
-        
+        \resumeItem{\normalsize{\href{https://www.credly.com/badges/dc22fd53-b367-4c97-b2ef-066a59371946/public_url}{\textbf{Solutions Architect Associate (SAA-C03)} - Amazon Web Services (AWS) \footnotesize{\raisebox{-0.1\height}\faExternalLink}}}} \vspace{-5pt}
+        \resumeItem{\normalsize{\href{https://www.credly.com/badges/d0f572c3-7d2c-416c-803d-4963611704f5/public_url}{\textbf{Certified Cloud Practitioner (CLF-C02)} - Amazon Web Services (AWS) \footnotesize{\raisebox{-0.1\height}\faExternalLink}}}} \vspace{-5pt}
+        % \resumeItem{\normalsize{\href{https://github.com/kaushalrathi24/funtimeError}{2023 Yantra "Main Hack" - Education Track Winner (Career Node), VIT - Vellore \footnotesize{\raisebox{-0.1\height}\faExternalLink}}}} \vspace{-3pt}
         %\resumeItem{\href{certificateLink.com}{Certified Ethical Hacker (CEH) - EC-Council (Pursuing)}} \vspace{-3pt}
     \resumeItemListEnd
-}
-\end{itemize}
-\vspace{-7.5pt}
+    \vspace{-7.5pt}
 
 
 
@@ -374,10 +355,10 @@
         %     \vspace{-1pt}
 
     \resumeSubHeadingListEnd
-    \vspace{-10pt}
-
-
-
+    \vspace{-12.5pt}
+    
+    
+    
 %-----------EXTRA CURRICULAR-----------
 \section{EXTRA CURRICULAR}
     \vspace{2.5pt}
@@ -388,44 +369,31 @@
             {VIT, Vellore}
             \vspace{0pt}
             \resumeItemListStart
-                
-                % \resumeItem{\normalsize{Organized diverse events and managed projects.}} \\
-                % \vspace{-10pt}
-                
+                % \resumeItem{\normalsize{Organized diverse events and managed projects.}}
+                % \vspace{0.5pt}
                 \resumeItem{\normalsize{Developed questions for the Reverse Coding (RC) contest with 500+ contestants.\textcolor{blue}{\small{\textit{*}}}}}
                 \vspace{0.5pt}
-                
-                \resumeItem{\normalsize{Built CI/CD pipelines for RC using GitHub Actions, Docker, and CMake for multi-platform question binaries.}}
-                \vspace{-10pt}
-                
+                \resumeItem{\normalsize{Built CI/CD pipelines for Reverse Coding using \href{https://github.com/saharshbhansali/rc-23}{GitHub Actions, Docker, and CMake} for multi-platform question binaries. \href{https://github.com/saharshbhansali/rc-23}{\footnotesize{\raisebox{-0.1\height}\faExternalLink}}}}
+                \vspace{0.5pt}
                 \resumeItem{\normalsize{Facilitated Cryptic Hunt - a 3-day, annual, campus-wide, hybrid treasure hunt, with 700+ participants.}}
                 \vspace{0.5pt}
-                
                 \resumeItem{\normalsize{Speaker and organiser at CodexCryptum, a cryptography and cybersecurity bootcamp, for 2 years.}}
                 \vspace{0.5pt}
-                
                 % \resumeItem{\normalsize{Played key roles in hackathons as a participant, review panel member, and event manager.}}
                 % \vspace{0.5pt}
-                
                 % \resumeItem{\normalsize{Participated in Capture The Flag competitions, following my passion for research and problem-solving.}}
-
                 % \resumeItem{\normalsize{Participated in ACM Winter School - a 12-day cryptography and cybersecurity bootcamp, oraganized by ACM-India at VIT, Vellore. }} % - add content about what concepts and tools I actually learnt about
-                
                 \vspace{0.5pt}
-            
-        \resumeItemListEnd
-        \vspace{-5pt}
+            \resumeItemListEnd
+            \vspace{-5pt}
         
         % \resumeSubheading
         %     {The Next Chapter - Literature Club }{June, 2022 -- Feb, 2024}{\uniformunderline{Co-Secretary}}{VIT, Vellore}
         %     % \vspace{-3pt}
         %     \resumeItemListStart
         %         \resumeItem{\normalsize{Coordinated internal management between departments as Co-Secretary.}}
-                
         %         \resumeItem{\normalsize{Participated in discussions and wrote editorials, organized literary events, and created promotional posts, stories, and digital content, while working with the Editorial, Management, and Design departments.}}
-                
         %         \resumeItem{\normalsize{Managed the club’s Instagram page.}}
-                
         %     \resumeItemListEnd 
         %     % \vspace{-5pt}
 
