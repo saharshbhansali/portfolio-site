@@ -50,7 +50,7 @@ const projectsData = [
 ---
 
 <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark-950">
-  <div class="max-w-6xl mx-auto">
+  <div class="w-[85%] mx-auto max-w-none">
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
         Featured Projects
@@ -58,9 +58,31 @@ const projectsData = [
       <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
     </div>
     
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory" style="scrollbar-width: thin; scrollbar-color: rgba(156, 163, 175, 0.5) transparent;">
+      <style>
+        div::-webkit-scrollbar {
+          height: 2.5px;
+        }
+        div::-webkit-scrollbar-track {
+          background: transparent;
+          border-radius: 3px;
+        }
+        div::-webkit-scrollbar-thumb {
+          background: rgba(156, 163, 175, 0.5);
+          border-radius: 3px;
+        }
+        div::-webkit-scrollbar-thumb:hover {
+          background: rgba(156, 163, 175, 0.7);
+        }
+        .dark div::-webkit-scrollbar-thumb {
+          background: rgba(107, 114, 128, 0.5);
+        }
+        .dark div::-webkit-scrollbar-thumb:hover {
+          background: rgba(107, 114, 128, 0.7);
+        }
+      </style>
       {projectsData.map((project, index) => (
-        <div class="bg-gray-50 dark:bg-dark-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+        <div class="bg-gray-50 dark:bg-dark-900 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group min-w-[320px] md:min-w-[380px] lg:min-w-[420px] snap-start">
           <div class="p-6">
             <div class="flex items-start justify-between mb-4">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
